@@ -1,6 +1,6 @@
 export default [
   {
-    name: 'Fish',
+    name: 'Rotty',
     breed: 'tuxedo',
     species: 'cat',
     gender: 'male',
@@ -11,7 +11,7 @@ export default [
     notes: 'Sweet kitty. He loves getting his belly rubbed.'
   },
   {
-    name: 'Henry',
+    name: 'Rotty',
     breed: 'tabby',
     species: 'cat',
     gender: 'male',
