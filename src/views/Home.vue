@@ -38,12 +38,17 @@ export default {
   name: 'Home',
   data() {
     return {
-      showPetForm
+      showPetForm: false,
+      formData: {
+        name: '',
+        age: 0,
+        species: null
+      }
     }
   },
   methods: {
     togglePetForm() {
-    this.showPetForm = this.showPetForm
+    this.showPetForm = !this.showPetForm
     }
   }
 }
