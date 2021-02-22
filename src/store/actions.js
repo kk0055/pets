@@ -1,6 +1,5 @@
-import cats from '../data/cats'
-import dogs from '../data/dogs'
-
 export default {
-
+addPet: ({commit}, payload) => {
+  commit('appendPet', payload)
+}
 }
