@@ -2,7 +2,7 @@
   <div>
     <h1>{{ species }} for adoption</h1>
     <b-table striped hover :items="pets">
-    <template slot="name" slot-scope="data">
+    <template v-slot:cell(name)="data">
      <router-link :to="`/pets/${species}/${data.index}`">
     {{ data.value }}  
      </router-link>
