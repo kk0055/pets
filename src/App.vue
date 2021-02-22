@@ -4,8 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/cats">Cats</router-link> |
       <router-link to="/dogs">Dogs</router-link>|
-      <router-link to="/pet">Pet</router-link>|
-    </div>
+        </div>
     <b-container>
     <router-view/>
     </b-container>
