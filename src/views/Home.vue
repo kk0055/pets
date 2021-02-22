@@ -1,6 +1,8 @@
 <template>
   <div class="home">
     <h1>Adopt a pet</h1>
+  {{ animalsCount }}
+
       <button @click="togglePetForm" class="btn btn-primary">Add New Pet</button>
 
     <b-form @submit.prevent="handleSubmit" v-if="showPetForm">
@@ -33,7 +35,7 @@
 </template>
 
 <script>
-import {mapActions} from 'vuex'
+import {mapActions, mapGetters} from 'vuex'
 
 export default {
   name: 'Home',
@@ -46,6 +48,11 @@ export default {
         species: null
       }
     }
+  },
+  computed: {
+  ...mapGetters([
+    'animalsCount'
+  ])
   },
   methods: {
     ...mapActions([
@@ -64,6 +71,14 @@ export default {
         }
         }
       this.addPet(payload)
+
+      
+      // 登録完了したらフォームをクリア
+      this.formData = {
+        name: '',
+        age: 0,
+        species: null
+      }
     }
   }
 }
