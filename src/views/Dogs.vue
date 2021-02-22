@@ -2,6 +2,11 @@
   <div>
     <h1>Dogs for adoption</h1>
     <b-table striped hover :items="dogs"></b-table>
+       <template slot="name" slot-scope="data">
+     <router-link :to="`/pets/dogs/${data.index}`">
+     {{ data.value }} 
+     </router-link>
+   </template>
   </div>
 </template>
 
