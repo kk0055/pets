@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import {mapActions} from 'vuex'
 
 export default {
   name: 'Home',
@@ -47,8 +48,22 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      'addPet'
+    ]),
     togglePetForm() {
     this.showPetForm = !this.showPetForm
+    },
+    handleSubmit() {
+        const { species, age, name} = this.formData
+        const payload = {
+        species,
+        pet: {
+          name,
+          age
+        }
+        }
+      this.addPet(payload)
     }
   }
 }
