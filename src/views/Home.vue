@@ -1,9 +1,10 @@
 <template>
   <div class="home">
     <h1>Adopt a pet</h1>
-    {{ getAllCats.length }}
-    {{ animalsCount }}
-
+    {{ getAllCats.length }} Cats
+    <br>
+    {{ animalsCount }} Animals
+    <br>
       <button @click="togglePetForm" class="btn btn-primary">Add New Pet</button>
 
     <b-form @submit.prevent="handleSubmit" v-if="showPetForm">
